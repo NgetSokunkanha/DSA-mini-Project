@@ -50,6 +50,16 @@ void dijkstra(int start) {
     }
 }
 
+void printPath(int v) {
+    if (v == -1)
+        return;
+    printPath(previousBuilding[v]);
+    cout << v << " ";
+}
+
+void printDistance(int v) {
+    cout << "\nTotal Distance: " << dist[v] << " meters.\n";
+}
 
 
 
